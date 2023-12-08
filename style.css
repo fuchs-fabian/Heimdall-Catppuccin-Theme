@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&display=swap");
- 
+
 #app {
-  background-position: right;
+  background-position: center !important;
 }
 
 #app #sortable,
@@ -14,9 +14,8 @@
   transform: translateY(50%);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  box-shadow: rgba(255, 255, 255, 0.1) -1px 1px 1px 0, rgba(255, 255, 255, 0.1) 0 -1px 1px 0,
-    rgba(0, 0, 0, 0.1) -1px 0 20px 5px;
-  background-color: rgba(40, 40, 40, 0.25);
+  box-shadow: rgba(255, 255, 255, 0.1) -1px 1px 1px 0,
+    rgba(255, 255, 255, 0.1) 0 -1px 1px 0, rgba(0, 0, 0, 0.1) -1px 0 20px 5px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -27,16 +26,10 @@
 
 #config-buttons a svg {
   transition: all 0.1s ease-in-out;
-  color: rgba(255, 255, 255, 0.5);
 }
 
 #config-buttons a:hover svg {
   transform: scale(1.1);
-  color: rgba(137, 180, 250, 0.95);
-}
- 
-.black {
-  color: rgb(186, 194, 222) !important;
 }
 
 .tooltip {
@@ -44,36 +37,22 @@
 }
 
 .searchform {
-  box-shadow: rgba(0, 0, 0, 0.05) -1px -1px 5px 0, rgba(0, 0, 0, 0.15) 0px 20px 25px -5px,
-  rgba(0, 0, 0, 0.04) 0px 10px 10px -5px !important;
+  box-shadow: rgba(0, 0, 0, 0.05) -1px -1px 5px 0,
+    rgba(0, 0, 0, 0.15) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px !important;
   border-radius: 12px;
   background-image: none;
   border: none;
   outline: none;
-  background-color: rgba(69, 71, 90, 0.7) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
-.searchform button {
-  background: rgb(137, 180, 250) !important;
-  color: rgb(224, 228, 243) !important;
-}
-
-.searchform input {
-  background: rgb(108, 112, 134) !important;
-  color: rgb(205, 214, 244) !important;
-}
-
 .searchform select {
-  background: rgb(108, 112, 134) !important;
-  border-right: 1px solid rgb(108, 112, 134) !important;
-  color: rgb(224, 228, 243) !important;
+  border-right: 1px !important;
 }
- 
+
 .item {
-  box-shadow: rgba(0, 0, 0, 0.05) -1px -1px 5px 0, rgba(0, 0, 0, 0.15) 0px 20px 25px -5px,
-    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px !important;
   border-radius: 12px;
   background-image: none;
   border: none;
@@ -84,7 +63,6 @@
   padding: 1rem 55px 1rem 1rem;
   transition: all 0.25s ease-in-out;
   transition-property: transform, box-shadow, background-color;
-  background-color: rgba(69, 71, 90, 0.7) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -96,7 +74,6 @@
 
 .item:hover {
   transform: scale(1.1);
-  background-color: rgba(69, 71, 90, 0.8) !important;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 60px 40px -7px !important;
 }
 
@@ -105,28 +82,15 @@
   vertical-align: middle;
   opacity: 0.2;
 }
- 
-@media only screen and (max-width: 750px) {
-  .item {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-  #config-buttons {
-    display: none;
-  }
-}
- 
-.details * {
-  color: rgb(137, 180, 250) !important;
-}
+
 .details {
   padding: 0 0.5rem;
 }
- 
+
 .app-icon {
   filter: drop-shadow(1px 1px 2px rgba(10, 0, 20, 0.1));
 }
- 
+
 .livestats-container {
   margin-top: 0.5rem;
 }
@@ -138,23 +102,94 @@
 .livestats-container .livestats li {
   padding-right: 1rem;
 }
- 
+
 .livestats-container strong {
   font-weight: 500 !important;
   padding: 0 2px;
 }
- 
+
 .details > .title {
-  font-weight: 800;
-  font-size: 1.3rem !important;
+  font-weight: 350;
+  font-size: 1rem;
   letter-spacing: 1px;
-  font-family: "Raleway", sans-serif;
-  text-shadow: rgba(10, 0, 60, 0.25) 1px 0 5px;
-  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 2px rgba(10, 0, 60, 0.25);
+  font-family: Arial, Helvetica, sans-serif;
   transition: all 0.25s ease-in-out;
 }
 
-.item:hover .details > .title {
-  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 5px rgba(10, 0, 60, 0.2);
+/* Media query for smaller screens */
+@media only screen and (max-width: 750px) {
+  #config-buttons,
+  .tooltip,
+  .searchform {
+    display: none !important;
+  }
+
+  .details > .title {
+    font-size: 0.9rem !important;
+  }
+
+  .item {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .item:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
 }
- 
+
+/***** dark and light mode *****/
+/*** background-color ***/
+/* dark mode */
+.dark-mode #app .item,
+.dark-mode #config-buttons,
+.dark-mode #app .searchform,
+.dark-mode #app .searchform input {
+  background-color: #3d3846 !important;
+}
+
+.dark-mode #app .searchform select,
+.dark-mode #app .searchform button {
+  background-color: #5e5c64 !important;
+}
+
+/* light mode */
+.light-mode #app .item,
+.light-mode #config-buttons,
+.light-mode #app .searchform,
+.light-mode #app .searchform input {
+  background-color: #deddda !important;
+}
+
+.light-mode #app .searchform select,
+.light-mode #app .searchform button {
+  background-color: #9a9996 !important;
+}
+
+/*** color ***/
+/* dark mode */
+.dark-mode #app .item > .link,
+.dark-mode #config-buttons a svg {
+  color: #deddda !important;
+}
+
+.dark-mode #app .searchform input,
+.dark-mode #app .searchform select,
+.dark-mode #app .searchform button,
+.dark-mode #app .details > .title {
+  color: white !important;
+}
+
+/* light mode */
+.light-mode #app .item > .link,
+.light-mode #config-buttons a svg {
+  color: #3d3846 !important;
+}
+
+.light-mode #app .searchform input,
+.light-mode #app .searchform select,
+.light-mode #app .searchform button,
+.light-mode #app .details > .title {
+  color: black !important;
+}
